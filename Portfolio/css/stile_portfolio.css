@@ -250,7 +250,13 @@ header {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.focused-thumb:hover .portfolio-decript,
+.focused-thumb:hover .portfolio-decript {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
+    1px 4px 6px rgb(0 0 0 / 16%);
+}
+
 .focused-thumb:focus .portfolio-decript {
   opacity: 1;
   transform: translateY(0);
@@ -263,11 +269,13 @@ header {
   margin-top: 30px;
   position: relative;
   border: 1px solid #eeeeee;
-  /*  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*.examples-box:hover {
+.examples-box:hover,
+.examples-box:focus {
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
-    1px 4px 6px rgb(0 0 0 / 16%);*/
+    1px 4px 6px rgb(0 0 0 / 16%);
+}
 .text-box {
   padding: 20px 24px 20px 24px;
 }
